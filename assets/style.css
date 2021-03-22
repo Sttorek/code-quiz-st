@@ -30,6 +30,7 @@ html {
 
 /* class selectors ------------------------------------- */
 
+
 /* id selectors ---------------------------------------- */
 /* header__________________ */
 #score-box {
@@ -46,7 +47,7 @@ html {
 }
 
 #time {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border-radius: 30px;
   margin: 10px 10px 10px 10px;
   padding-left: 10px;
