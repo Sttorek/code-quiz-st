@@ -71,7 +71,46 @@ html {
 }
 
 /*main_____________________ */
-#quiz-box {
+/* new---------------------------------- */
+#welcome-screen {
+  height: 400px;
+  width: 800px;
+  background-color: rgb(137, 196, 129);
+  border-radius: 35px;
+  padding-top: 40px;
+}
+
+#question-screen {
+  height: 400px;
+  width: 800px;
+  background-color: rgb(137, 196, 129);
+  border-radius: 35px;
+  padding-top: 40px;
+  font-size: 25px;
+}
+
+#main-container {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  margin-top: 70px;
+  
+  
+}
+
+#start-btn {
+  height: 50px;
+  width: 170px;
+  border-radius: 25px;
+  margin-top: 90px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* #quiz-box {
   display: flex;
   flex-flow: column wrap;
   height: 480px;
@@ -118,5 +157,5 @@ html {
   align-self: flex-end;
   font-size: 30px;
   background-color: rgb(210, 230, 212);
-}
+} */
 
