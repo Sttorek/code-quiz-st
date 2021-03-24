@@ -2,12 +2,10 @@
 var questionBox = document.getElementById("question-box");
 var answerBox = document.getElementById("initial-text");
 var mainBtn = document.getElementById("main-button");
-var btnCont = document.getElementById("btn-cont")
+var btnCont = document.getElementById("btn-cont");
 var highScore = document.getElementById("high-score");
 var time = document.getElementById("time-box");
-var mainContainer = document.getElementById("answer-box")
-
-
+var mainContainer = document.getElementById("answer-box");
 
 var btnOne = document.getElementById("btn-one");
 var btnTwo = document.getElementById("btn-two");
@@ -25,7 +23,8 @@ var testPageOne = {
 };
 
 var testPageTwo = {
-  question: "What can you use to run the same code multiple times with different values?",
+  question:
+    "What can you use to run the same code multiple times with different values?",
   choiceOne: "Compilers",
   choiceTwo: "Event Listeners",
   choiceThree: "For Loops",
@@ -64,18 +63,14 @@ var testPageSix = {
   choiceFour: "Guido van Rossum",
 };
 
-
-
-
 // FUNCTION DEFINITIONS -----------------------------------------------------------
-
 
 function gameOverMessage() {
   document.getElementById("time").textContent = "Game Over!";
-  document.getElementById("time").setAttribute("style", "background-color: red; font-size: 40px;");
-
-};
-
+  document
+    .getElementById("time")
+    .setAttribute("style", "background-color: red; font-size: 40px;");
+}
 
 function runSecondPage() {
   questionBox.innerHTML = testPageTwo.question;
@@ -84,19 +79,22 @@ function runSecondPage() {
   btnThree.innerHTML = testPageTwo.choiceThree;
   btnFour.innerHTML = testPageTwo.choiceFour;
 
-  btnOne.addEventListener("click", function() {
+  btnOne.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runThirdPage();
   });
-  btnTwo.addEventListener("click", function() {
+  btnTwo.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runThirdPage();
   });
-  btnThree.addEventListener("click", function() {
+  btnThree.addEventListener("click", function () {
     runThirdPage();
   });
-  btnFour.addEventListener("click", function() {
+  btnFour.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runThirdPage();
   });
-};
+}
 
 function runThirdPage() {
   questionBox.innerHTML = testPageThree.question;
@@ -105,19 +103,22 @@ function runThirdPage() {
   btnThree.innerHTML = testPageThree.choiceThree;
   btnFour.innerHTML = testPageThree.choiceFour;
 
-  btnOne.addEventListener("click", function() {
+  btnOne.addEventListener("click", function () {
     runFourthPage();
   });
-  btnTwo.addEventListener("click", function() {
+  btnTwo.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runFourthPage();
   });
-  btnThree.addEventListener("click", function() {
+  btnThree.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runFourthPage();
   });
-  btnFour.addEventListener("click", function() {
+  btnFour.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runFourthPage();
   });
-};
+}
 
 function runFourthPage() {
   questionBox.innerHTML = testPageFour.question;
@@ -126,19 +127,22 @@ function runFourthPage() {
   btnThree.innerHTML = testPageFour.choiceThree;
   btnFour.innerHTML = testPageFour.choiceFour;
 
-  btnOne.addEventListener("click", function() {
+  btnOne.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runFifthPage();
   });
-  btnTwo.addEventListener("click", function() {
+  btnTwo.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runFifthPage();
   });
-  btnThree.addEventListener("click", function() {
+  btnThree.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runFifthPage();
   });
-  btnFour.addEventListener("click", function() {
+  btnFour.addEventListener("click", function () {
     runFifthPage();
   });
-};
+}
 
 function runFifthPage() {
   questionBox.innerHTML = testPageFive.question;
@@ -147,19 +151,22 @@ function runFifthPage() {
   btnThree.innerHTML = testPageFive.choiceThree;
   btnFour.innerHTML = testPageFive.choiceFour;
 
-  btnOne.addEventListener("click", function() {
+  btnOne.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runSixthPage();
   });
-  btnTwo.addEventListener("click", function() {
+  btnTwo.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runSixthPage();
   });
-  btnThree.addEventListener("click", function() {
+  btnThree.addEventListener("click", function () {
     runSixthPage();
   });
-  btnFour.addEventListener("click", function() {
+  btnFour.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runSixthPage();
   });
-};
+}
 
 function runSixthPage() {
   questionBox.innerHTML = testPageSix.question;
@@ -167,30 +174,28 @@ function runSixthPage() {
   btnTwo.innerHTML = testPageSix.choiceTwo;
   btnThree.innerHTML = testPageSix.choiceThree;
   btnFour.innerHTML = testPageSix.choiceFour;
-// !!!!!!!!!!!!!!!!!subtract seconds from wrong answers!!!!!!!!!!!!!!!!!!!!!!!!
-  btnOne.addEventListener("click", function() {
+  // !!!!!!!!!!!!!!!!!subtract seconds from wrong answers!!!!!!!!!!!!!!!!!!!!!!!!
+  btnOne.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runCompletedGame();
   });
-  btnTwo.addEventListener("click", function() {
+  btnTwo.addEventListener("click", function () {
     runCompletedGame();
   });
-  btnThree.addEventListener("click", function() {
+  btnThree.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runCompletedGame();
   });
-  btnFour.addEventListener("click", function() {
+  btnFour.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runCompletedGame();
   });
-};
+}
 // This runs the completed page
 function runCompletedGame() {
-  
   mainContainer.innerHTML = "";
   questionBox.innerHTML = "Complete!";
-  
-};
-
-
-
+}
 
 // EVENT LISTENERS ----------------------------------------------------------------
 
@@ -198,14 +203,13 @@ mainBtn.addEventListener("click", function () {
   var startTimer = setInterval(function () {
     secondsLeft--;
     time.textContent = secondsLeft;
-    
-    if (secondsLeft === 0) {
+
+    if (secondsLeft < 0) {
       clearInterval(startTimer);
       gameOverMessage();
     }
   }, 1000);
 });
-
 
 mainBtn.addEventListener("click", function () {
   questionBox.innerHTML = testPageOne.question;
@@ -215,21 +219,19 @@ mainBtn.addEventListener("click", function () {
   btnThree.innerHTML = testPageOne.choiceThree;
   btnFour.innerHTML = testPageOne.choiceFour;
   btnCont.innerHTML = "";
-  btnOne.addEventListener("click", function() {
-    
-    setInterval() - 20;
+  btnOne.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runSecondPage();
   });
-  btnTwo.addEventListener("click", function() {
+  btnTwo.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runSecondPage();
   });
-  btnThree.addEventListener("click", function() {
+  btnThree.addEventListener("click", function () {
+    secondsLeft = secondsLeft - 10;
     runSecondPage();
   });
-  btnFour.addEventListener("click", function() {
+  btnFour.addEventListener("click", function () {
     runSecondPage();
   });
-
-
 });
-
