@@ -1,4 +1,8 @@
 # code-quiz-st
 
-Add a normalize sheet
-Add or Delete Thumbs up img on completed page
+In this activity I've created a timed JavaScript quiz. If you click the wrong answer, seconds are deducted from your time. Once finished you can log your high score.
+
+site-
+
+
+![coding-quiz]()

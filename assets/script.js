@@ -12,7 +12,7 @@ var btnTwo = document.getElementById("btn-two");
 var btnThree = document.getElementById("btn-three");
 var btnFour = document.getElementById("btn-four");
 // JAVASCRIPT VARIABLES -----------------------------------------------------------
-var secondsLeft = 60;
+var secondsLeft = 90;
 
 var testPageOne = {
   question: "What can be found inside of objects?",
